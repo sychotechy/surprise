@@ -26,10 +26,8 @@ body {
 
 .box {
     position: relative;
-    width: 90%;
-    max-width: 350px;
-    height: auto;
-    padding: 20px;
+    width: 600px;
+    height: 350px;
     background: rgba(253, 233, 234, 0.9);
     border-radius: 5px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
@@ -57,9 +55,8 @@ body {
 }
 
 .mail {
-    width: 100%;
-    height: auto;
-    max-width: 300px;
+    width: 550px;
+    height: 300px;
     border: 2px dashed rgb(167, 32, 71);
     border-radius: 15px;
 }
@@ -134,9 +131,8 @@ body {
 }
 
 .content p {
-    padding: 10px 20px;
-    font-size: 1rem;
-    text-align: center;
+    padding: 0px 45px;
+    font-size: 20px;
     font-family: 'Dancing Script', cursive;
     opacity: 0;
     transition: all 1s;
@@ -355,32 +351,36 @@ body {
     }
 
     .mail {
-        width: 550px;
-        height: 407px;
+        width: 100%;
+        height: auto;
         border: 2px dashed rgb(167, 32, 71);
         border-radius: 15px;
+        padding: 15px;
     }
 
     .content .title h2 {
         font-family: 'Dancing Script', cursive;
         font-size: 2rem;
         color: rgb(181, 12, 17);
-        opacity: 0;
-        transform: translateY(-40px);
-        transition: 2s;
-    }
-
-    .warpper:hover .title h2 {
-        opacity: 1;
-        transform: translateY(1px);
+        opacity: 1 !important;  /* Ensure visibility */
+        transform: translateY(0px) !important;  /* Reset transform */
+        transition: none; /* Remove transition */
+        text-align: center;
     }
 
     .content p {
-        padding: 21px 40px;
+        padding: 21px 20px;
         font-size: 1rem;
         font-family: 'Dancing Script', cursive;
-        opacity: 0;
-        transition: all 1s;
+        opacity: 1 !important;  /* Ensure visibility */
+        transition: none; /* Remove transition */
+        text-align: center;
+    }
+
+    /* Disable hover animations since hover doesn't work on mobile */
+    .warpper:hover .title h2,
+    .warpper:hover .content p {
+        animation: none;
     }
 
     .gifs_left {
